@@ -8,6 +8,11 @@ export interface CookBookModel {
 
 export interface Cookbook {
   id: string;
-  parent: string;
+  parent: string | null;
+  description: string;
+}
+
+export interface PartialCookBook {
+  parent: string | null;
   description: string;
 }

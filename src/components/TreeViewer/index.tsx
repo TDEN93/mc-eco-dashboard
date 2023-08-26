@@ -107,20 +107,22 @@ function TreeViewer() {
   const [edges, setEdges, onEdgesChange] = useEdgesState(layoutedEdges);
 
   return (
-    <ReactFlow
-      className={styles.container}
-      nodes={nodes}
-      edges={edges}
-      onNodesChange={onNodesChange}
-      onEdgesChange={onEdgesChange}
-      proOptions={{ hideAttribution: true }}
-      connectionLineType={ConnectionLineType.SmoothStep}
-      fitView
-    >
-      <Background />
-      <Controls />
-    </ReactFlow>
+    <div className={styles.container}>
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        proOptions={{ hideAttribution: true }}
+        connectionLineType={ConnectionLineType.SmoothStep}
+        fitView
+      >
+        <Background />
+        <Controls />
+      </ReactFlow>
+    </div>
   );
+  
 }
 
 export default TreeViewer;

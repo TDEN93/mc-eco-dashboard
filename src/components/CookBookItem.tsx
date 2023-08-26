@@ -20,8 +20,7 @@ function CookBookItem({ id, parent, description }: Cookbook) {
       </div>
 
       <div className={styles.item}>
-        <span>{id}</span>
-        <span>{parent}</span>
+        {parent !== null ? <span>{parent}</span> : null}
         <span className={styles.description}>{description}</span>
       </div>
     </div>
